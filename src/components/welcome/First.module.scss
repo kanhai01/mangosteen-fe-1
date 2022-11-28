@@ -10,6 +10,7 @@
     border-radius: 8px;
     padding: 16px;
     margin: 16px;
+    margin-bottom: 0;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -21,14 +22,19 @@
     }
   }
   > .actions {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 16px;
-    font-size: 32px;
+    font-size: 26px;
     color: var(--welcome1--button-text);
-    margin-top: 24px;
-    margin-bottom: 26px;
+    height: var(--welcome1-nav-height);
+    padding: 0px 16px;
+    z-index: var(--z-index-bottom-nav);
+    background: var(--welcome1-bg-end);
     > .fake {
       visibility: hidden;
     }
