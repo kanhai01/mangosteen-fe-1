@@ -1,0 +1,35 @@
+.card {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  background: var(--welcome1--bg--color);
+  border-radius: 8px;
+  padding: 16px;
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  > h2 {
+    margin-top: 40px;
+  }
+}
+
+.actions {
+  position: fixed;
+  z-index: var(--z-index-bottom-nav);
+  background: var(--welcome1-bg-end);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  height: var(--welcome1-nav-height);
+  padding: 0 16px;
+  color: var(--welcome1--button-text);
+  padding-bottom: var(--welcome1-nav-gap);
+  > .fake {
+    visibility: hidden;
+  }
+}

@@ -1,35 +1,17 @@
-import { defineComponent } from "vue";
-import s from "./WelcomeLayout.module.scss";
-import welcome3 from "../../assets/icons/welcome3.svg";
-import { RouterLink } from "vue-router";
-import { WelcomeLayout } from "./WelcomeLayout";
+import s from "./welcome.module.scss";
+export const Third = () => {
+  return (
+    <div class={s.card}>
+      <svg>
+        <use xlinkHref="#welcome3"></use>
+      </svg>
+      <h2>
+        每日提醒
+        <br />
+        不遗漏每一笔账单
+      </h2>
+    </div>
+  );
+};
 
-export const third = defineComponent({
-  setup: (props, context) => {
-    return () => (
-      <WelcomeLayout>
-        {{
-          icon: () => <img src={welcome3} />,
-          title: () => (
-            <h2>
-              数据可视化
-              <br />
-              收支一目了然
-            </h2>
-          ),
-          buttons: () => (
-            <>
-              <RouterLink class={s.fake} to="/start">
-                跳过
-              </RouterLink>
-              <RouterLink class={s.next} to="/welcome/4">
-                下一页
-              </RouterLink>
-              <RouterLink to="/start">跳过</RouterLink>
-            </>
-          ),
-        }}
-      </WelcomeLayout>
-    );
-  },
-});
+Third.displayName = "Third";
