@@ -7,7 +7,8 @@ export type IconName =
   | "welcome2"
   | "welcome3"
   | "welcome4"
-  | "mangosteen";
+  | "mangosteen"
+  | "menu";
 
 export const Icon = defineComponent({
   props: {
@@ -18,11 +19,9 @@ export const Icon = defineComponent({
   },
   setup: (props, context) => {
     return () => (
-      <div>
-        <svg class={s.icon}>
-          <use xlinkHref={"#" + props.name}></use>
-        </svg>
-      </div>
+      <svg class={s.icon}>
+        <use xlinkHref={"#" + props.name}></use>
+      </svg>
     );
   },
 });
